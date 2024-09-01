@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+  <title>EXPLORING HAM RADIO: UNDERSTANDING PHONETICS</title>
+
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        background-color: black;
+        color: white;
+        height: 4vh;
+        font-size: 130%;
+        text-align: center;
+        padding-top: 10px;
+      }
+
+      .button {
+        background-color: #ffffff;
+        border: 2px solid black;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      .button1 {
+        border-radius: 12px;
+        margin: 0;
+        position: absolute;
+        top: 37%;
+        left: 49%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      .button2 {
+        border-radius: 50%;
+        margin: 0;
+        position: absolute;
+        top: 80%;
+        left: 48%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      body {
+        font-family: verdana;
+        margin: 0;
+        padding: 0;
+      }
+
+      .footer {
+        position: absolute;
+        left: 200px;
+        top: 580px;
+        font-size: 12px;
+        text-align: center;
+        padding-left: 90px;
+      }
+
+      h2 {
+        margin-left: 20px;
+      }
+
+      #screen {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        height: 600px;
+        width: 800px;
+        border: solid 1px;
+      }
+
+      .allignment {
+        position: absolute;
+        left: 40px;
+        top: 45px;
+      }
+
+      .incanvas {
+        margin: 5px 0 0 5px;
+        padding: 0;
+      }
+
+      .circlebg {
+        border-radius: 100%;
+        font-size: 25px;
+        color: #fff;
+        text-align: center;
+        background: #000;
+      }
+
+      .steptext {
+        display: inline;
+        font-size: 15px;
+      }
+
+      .inline-paragraphs p {
+        display: inline-block;
+        margin-right: 160px;
+        margin-left: 50px;
+        /* Adjust the margin as needed */
+      }
+
+      #outputValue {
+        position: absolute;
+        left: 175px;
+      }
+
+      #phoneticsValue {
+        position: absolute;
+        right: -40px;
+      }
+
+      #alphabetSpokenValues {
+        position: absolute;
+        left: 15px;
+      }
+
+      #spokenValueDisplay {
+        position: absolute;
+        font-weight: bolder;
+        left: 340px;
+        bottom: 380px;
+      }
+      .image {
+        position: absolute;
+        left: 320px;
+        top: 382px;
+      }
+      .image a {
+        text-decoration: none; /* Remove underline for the link */
+      }
+    </style>
+    <div id="screen">
+      <h1>EXPLORING HAM RADIO: UNDERSTANDING PHONETICS</h1>
+      <br /><br />
+      <div class="allignment">
+        <strong class="incanvas">STEP</strong>
+        <span class="circlebg">&nbsp;2&nbsp;</span>
+        <p style="font-size: 90%" class="steptext" id="StepText">&nbsp;</p>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div class="inline-paragraphs">
+        <p id="observationText"></p>
+        <p id="outputValue"></p>
+        <p id="phoneticsLabel">Relevant phonetics:</p>
+        <p id="phoneticsValue"></p>
+      </div>
+      <br />
+      <br />
+      <br />
+      <pre>
+<button onclick="pronounce()"  class="button button1">Pronouciation</button>
+<br>
+<br>
+<br>
+<p style="text-align:center; padding-bottom: 50px;position: absolute;left: 340px;bottom: 260px;">Keep sound on!</p>
+<div class="image">
+   <a href="page2.html" >
+    <img src="repeat.png" alt="NEXT" >
+</a>
+</div>
+</pre>
+      <div class="footer">
+        &copy; EMBRACE - NITK
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </div>
+    </div>
+    <script>
+      function pronounce() {
+        var phonetics = document.getElementById("phoneticsValue").textContent;
+        var spokenValue = getSpokenValue();
+
+        if (phonetics !== "Not Available") {
+          var utterance = new SpeechSynthesisUtterance(phonetics);
+          speechSynthesis.speak(utterance);
+
+          // Display the spoken value below the Pronunciation button if it's not displayed yet
+          var spokenValueDisplay =
+            document.getElementById("spokenValueDisplay");
+          if (!spokenValueDisplay) {
+            spokenValueDisplay = document.createElement("p");
+            spokenValueDisplay.id = "spokenValueDisplay";
+            spokenValueDisplay.textContent = spokenValue;
+            spokenValueDisplay.style.textAlign = "center";
+            document.body.appendChild(spokenValueDisplay);
+          }
+        } else {
+          alert("Pronunciation is not available for this entry.");
+        }
+      }
+
+      // Retrieve the type and value from the URL parameters
+      var urlParams = new URLSearchParams(window.location.search);
+      var type = urlParams.get("type");
+      var value = urlParams.get("value");
+
+      // Display the selected alphabet/number and phonetics
+      document.getElementById("outputValue").textContent = value;
+      document.getElementById("phoneticsValue").textContent = getPhonetics(
+        type,
+        value
+      );
+
+      var observationText = "";
+      if (type === "alphabet") {
+        observationText = "Selected alphabets:";
+      } else if (type === "number") {
+        observationText = "Selected figure code:";
+      } else {
+        observationText = "Selected alphabets/figure code";
+      }
+      document.getElementById("observationText").textContent = observationText;
+
+      var StepText = "";
+      if (type === "alphabet") {
+        StepText =
+          "Observe the alphabet,relavent to the option choosen by the user.";
+      } else if (type === "number") {
+        StepText =
+          "Observe the figure code,relavent to the option choosen by the user.";
+      } else {
+        StepText =
+          "Observe the alphabets/figure code,relavent to the option choosen by the user.";
+      }
+      document.getElementById("StepText").textContent = StepText;
+
+      // Function to get phonetics based on the type and value
+      function getPhonetics(type, value) {
+        if (type === "alphabet") {
+          // Add phonetics for alphabets as needed
+          var alphabetPhonetics = {
+            A: "Alfa",
+            B: "Bravo",
+            C: "Charlie",
+            D: "Delta",
+            E: "Echo",
+            F: "Foxtrot",
+            G: "Golf",
+            H: "Hotel",
+            I: "India",
+            J: "Juliett",
+            K: "Kilo",
+            L: "Lima",
+            M: "Mike",
+            N: "November",
+            O: "Oscar",
+            P: "Papa",
+            Q: "Quebec",
+            R: "Romeo",
+            S: "Sierra",
+            T: "Tango",
+            U: "Uniform",
+            V: "Victor",
+            W: "Whiskey",
+            X: "X-ray",
+            Y: "Yankee",
+            Z: "Zulu",
+
+            // Add other alphabet phonetics as needed
+          };
+          return alphabetPhonetics[value];
+        } else if (type === "number") {
+          // Add phonetics for numbers as needed
+          var numberPhonetics = {
+            0: "Nadazero",
+            1: "Unaone",
+            2: "Bissotwo",
+            3: "Terrathree",
+            4: "Kartefour",
+            5: "Pantafive",
+            6: "Soxisix",
+            7: "Setteseven",
+            8: "Oktoeight",
+            9: "Novenine",
+            "0.0": "Decimal",
+            ".": "Stop",
+
+            // Add other number phonetics as needed
+          };
+          return numberPhonetics[value];
+        }
+      }
+      function getSpokenValue() {
+        var type = urlParams.get("type");
+        var value = urlParams.get("value");
+
+        if (type === "alphabet") {
+          var alphabetSpokenValues = {
+            A: "AL FAH",
+            B: "BRAH VOH",
+            C: "CHAR LEE",
+            D: "DELL TAH",
+            E: "ECK OH",
+            F: "FOKS TROT",
+            G: "GOLF",
+            H: "HOH TELL",
+            I: "IN DEE AH",
+            J: "JEW LEE ETT",
+            K: "KEY LOH",
+            L: "LEE MAH",
+            M: "MIKE",
+            N: "NO VEM BER",
+            O: "OSS CAH",
+            P: "PAH PAH",
+            Q: "KEH BECK",
+            R: "ROW ME OH",
+            S: "SEE AIR RAH",
+            T: "TANG GO",
+            U: "YOU NEE FORM",
+            V: "VIK TAH",
+            W: "WISS KEY",
+            X: "ECKS RAY",
+            Y: "YANG KEY",
+            Z: "ZOO LOO",
+            // ... (add other alphabet spoken values)
+          };
+          return alphabetSpokenValues[value];
+        } else if (type === "number") {
+          var numberSpokenValues = {
+            0: "NAH-DAH-ZAY-ROH",
+            1: "OO-NAH-WUN",
+            2: "BEES-SOH-TOO",
+            3: "TAY-RAH-TREE",
+            4: "KAR-TAY-FOWER",
+            5: "PAN-TAH-FIVE",
+            6: "SOK-SEE-SIX",
+            7: "SAY-TAY-SEVEN",
+            8: "OK-TOH-AIT",
+            9: "NO-VAY-NINER",
+            "0.0": "DAY-SEE-MAL",
+            ".": "STOP",
+          };
+          return numberSpokenValues[value];
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <title>EXPLORING HAM RADIO: UNDERSTANDING PHONETICS</title>
+<body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+h1{
+	background-color:black;
+    color:white;
+    height: 4vh;
+    font-size: 130%;
+    text-align: center;
+    padding-top: 10px;
+}
+img{
+    position: absolute;
+    right: 4px;
+    bottom: 30px;
+    height: 50px;
+    width: 50px;
+}
+.footer{
+    position: absolute;
+	left:200px;
+	top: 580px;
+	font-size: 12px;
+    text-align: center;
+    padding-left: 90px;
+
+}
+h2{
+   margin-left: 20px;;
+}
+
+#screen
+{
+	position: relative;
+	left:0px;
+	top:0px;
+	height: 600px; 
+	width:800px;
+	border:solid 1px;
+}
+form {
+    padding-left: 80px;
+    padding-top: 31px;
+}
+.allignment{
+    position: absolute;
+    left: 15px;
+    top: 45px;
+}
+        .incanvas {
+            margin: 5px 0 0 5px;
+            padding: 0;
+        }
+
+        .circlebg {
+            border-radius: 100%;
+            font-size: 25px;
+            color: #fff;
+            text-align: center;
+            background: #000
+        }
+
+        .steptext {
+            display: inline;
+            font-size: 15px;
+        }
+        body {
+      font-family: verdana;
+      margin: 0;
+      padding: 0;
+    }
+</style>
+<div id="screen">
+<h1>EXPLORING HAM RADIO: UNDERSTANDING PHONETICS
+</h1>
+<br><br>
+<div class="allignment">
+    <strong class="incanvas">STEP</strong>
+    <span class="circlebg">&nbsp;1&nbsp;</span>
+    <p style="font: size 110%;"class="steptext">&nbsp;Select any of the following options</p>
+  </div>
+<br>
+<form>
+  <input  type="radio" id="alphabets" name="select_option" value="Alphabets">
+  <label for="html">Alphabets</label><br><br>
+  <input type="radio" id="figure-code" name="select_option" value="Figure-code">
+  <label for="css">Figure code</label><br>
+</form> 
+<script>
+    function redirectToSelectedPage() {
+        var selectedOption;
+
+        // Check which radio button is selected
+        if (document.getElementById('alphabets').checked) {
+            selectedOption = document.getElementById('alphabets').value;
+        } else if (document.getElementById('figure-code').checked) {
+            selectedOption = document.getElementById('figure-code').value;
+        } else {
+            alert('Please select an option');
+            return;
+        }
+
+        // Redirect based on the selected option
+        switch (selectedOption) {
+            case 'Alphabets':
+                window.location.href = 'page3.html';
+                break;
+            case 'Figure-code':
+                window.location.href = 'page4.html';
+                break;
+            default:
+                alert('Invalid option');
+        }
+    }
+</script>
+</body>
+</html>
+<br>
+<br>
+<img src="Next.png" onclick="redirectToSelectedPage()" alt="NEXT" width="10" height="10">
+<br>
+<div class="footer">&copy; EMBRACE - NITK <script>document.write(new Date().getFullYear())</script></div>

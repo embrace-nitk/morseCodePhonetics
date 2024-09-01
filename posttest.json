@@ -1,0 +1,277 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Among the butane conformers, when viewed about C 2 -C 3 bond, which occur at energy minima on a graph of potential energy versus dihedral angle?",
+      "answers": {
+        "a": "Gauche only",
+        "b": "anti",
+        "c": "syn",
+        "d": "Both gauche and syn"
+      },
+      "explanations": {
+        "a": "Gauche conformers will have higher energy than anti conformer.",
+        "b": "Anti conformers have both CH3 groups farthest apart and hence has lowest energy.",
+        "c": "Syn conformers have the most close CH3 groups and this will lead to highest energy peaks.",
+        "d": "Only the anti conformer has the lowest energy."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the primary purpose of using phonetics in ham radio communication?",
+      "answers": {
+        "a": "To encrypt messages for security ",
+        "b": "To make communication more challenging",
+        "c": "To clarify and ensure accurate transmission of letters and numbers",
+        "d": "To communicate secretly with other operators"
+      },
+      "explanations": {
+        "a": " Using phonetics for encryption is not a primary purpose in ham radio. ",
+        "b": "Making communication more challenging is not the goal; clarity is the priority. ",
+        "c": "The primary purpose of using phonetics in ham radio communication is to ensure clarity and accurate transmission of letters and numbers. Phonetics helps reduce ambiguity and misunderstandings, especially when there may be variations in pronunciation or signal quality.",
+        "d": "The use of phonetics is not for secret communication but for clarity."
+      },
+      "correctAnswer": "c",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "When using the Phonetic Alphabet in ham radio, which word represents the letter H?",
+      "answers": {
+        "a": " Hotel ",
+        "b": " Delta",
+        "c": "Tango",
+        "d": "Foxtrot"
+      },
+      "explanations": {
+        "a": " In the Phonetic Alphabet used in ham radio, Hotel represents the letter H. Using standardized words for each letter helps ensure accurate and clear communication, even in noisy or challenging conditions.",
+        "b": "Delta represents the letter D. ",
+        "c": " Tango represents the letter T.",
+        "d": "Foxtrot represents the letter F."
+      },
+      "correctAnswer": "a",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "What is the term for the practice of using words to represent individual letters or numbers in ham radio communication?",
+      "answers": {
+        "a": "Acronym ",
+        "b": "Phonetics",
+        "c": "Encryption",
+        "d": "Jargon"
+      },
+      "explanations": {
+        "a": " An acronym is a word formed from the initial letters of other words.",
+        "b": " The practice of using words to represent individual letters or numbers in ham radio communication is called phonetics. Phonetics is essential for clear and accurate transmission.",
+        "c": " Encryption involves converting information into a code for security.",
+        "d": "Jargon refers to specialized terminology or language."
+      },
+      "correctAnswer": "b",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "Which of the following words is often used for the letter W in ham radio phonetics?",
+      "answers": {
+        "a": " Washington",
+        "b": "Whiskey",
+        "c": "Wilson",
+        "d": " Water"
+      },
+      "explanations": {
+        "a": " Washington is not a typical phonetic representation for W.",
+        "b": "In ham radio phonetics, Whiskey is commonly used to represent the letter W. Standardized words like this help avoid confusion when spelling out call signs or messages.",
+        "c": "Wilson is not used for the letter W.",
+        "d": "Water is not a standard phonetic representation for W."
+      },
+      "correctAnswer": "b",
+      "difficulty":"Beginner" 
+    },
+      {
+      "question": "In ham radio, what is the R-S-T system used for?",
+      "answers": {
+        "a": " Rating the quality of ham radio equipment",
+        "b": "Reporting signal strength and readability of transmissions",
+        "c": "Reciting secret codes for encryption",
+        "d": " Recording the time of day for communication"
+      },
+      "explanations": {
+        "a": "The R-S-T system is not used to rate the quality of ham radio equipment.",
+        "b": " The R-S-T system is used in ham radio to report the signal strength and readability of transmissions. It provides standardized codes for these aspects of communication.",
+        "c": " It is not used to recite secret codes for encryption.",
+        "d": " It does not record the time of day for communication."
+      },
+      "correctAnswer": "b",
+      "difficulty": "Beginner"
+  
+    },
+    {
+      "question": "When using the ITU Phonetic Alphabet in ham radio, what word represents the letter Q?",
+      "answers": {
+        "a": " Quebec",
+        "b": " Sierra",
+        "c": "Alpha",
+        "d": " Uniform"
+      },
+      "explanations": {
+        "a": "In the ITU Phonetic Alphabet, Quebec represents the letter Q. Using standardized words for each letter ensures clarity and accuracy in communication.",
+        "b": "Sierra represents the letter S.",
+        "c": "Alpha represents the letter A.",
+        "d": "Uniform represents the letter U."
+      },
+      "correctAnswer": "a",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": " Which phonetic representation is used for the number 7 in HAM radio communication? ",
+      "answers": {
+        "a": " Setteseven",
+        "b": " Oktoeight",
+        "c": "  Kartefour",
+        "d": "Pantafive"
+      },
+      "explanations": {
+        "a": " This option  is the correct representation for the number 7 in HAM radio communication according to the provided phonetic numbers. Setteseven is used to avoid confusion and ensure clear communication.",
+        "b": "This is option is incorrect. Oktoeight represents the number 8, not 7. It's important to accurately associate the phonetic representation with the correct numerical value.",
+        "c": " This is option is incorrect. Kartefour represents the number 4, not 7. It's crucial to use the correct phonetic representation for accurate communication.",
+        "d": "This option  is incorrect. Pantafive represents the number 5, not 7. Using the correct phonetic representation is essential in preventing misunderstandings. "
+      },
+      "correctAnswer": "a",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "Which of the following is NOT a typical use of phonetics in ham radio communication?",
+      "answers": {
+        "a": "Clarifying and ensuring accurate transmission of call signs",
+        "b": "Encoding secret messages for security",
+        "c": "Standardizing the pronunciation of letters and numbers",
+        "d": " Enhancing communication in noisy or challenging conditions"
+      },
+      "explanations": {
+        "a": " Clarifying and ensuring accurate transmission of call signs is a primary use of phonetics.",
+        "b": "The primary use of phonetics in ham radio is to clarify and ensure accurate transmission of call signs and messages. It is not intended for encoding secret messages.",
+        "c": "Standardizing the pronunciation of letters and numbers is a fundamental use of phonetics.",
+        "d": "Enhancing communication in noisy or challenging conditions is a key purpose of phonetics."
+      },
+      "correctAnswer": "b",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": " Which situation highlights the importance of the phonetic representation of numbers in HAM radio communication?",
+      "answers": {
+        "a": "Communicating names.",
+        "b": " Reading a weather report.",
+        "c": " Transmitting frequencies.",
+        "d": " Exchanging pleasantries."
+      },
+      "explanations": {
+        "a": "This option is incorrect. While phonetic representation is crucial for clarity in HAM radio communication, it is primarily essential when dealing with letters. When communicating names, the emphasis is usually on the phonetic representation of letters rather than numbers.",
+        "b": "This option is incorrect. Phonetic representation might be useful for conveying specific information in a weather report, but the question specifically asks about the importance of the phonetic representation of numbers.",
+        "c": "This option is correct. Phonetic representation of numbers is particularly important when transmitting frequencies in HAM radio communication. It helps prevent confusion between similar-sounding digits and ensures accurate understanding.",
+        "d": "This option is incorrect. When exchanging pleasantries, the focus is usually on words rather than numbers or specific technical information. While phonetic representation might be used occasionally for clarity in words, it's not as critical as in situations where numerical information needs to be conveyed. "
+      },
+      "correctAnswer": "c",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "When using phonetics, what word is commonly used to represent the letter C in ham radio?",
+      "answers": {
+        "a": " Charlie",
+        "b": " Bravo",
+        "c": "Golf",
+        "d": "Echo"
+      },
+      "explanations": {
+        "a": " In ham radio phonetics, Charlie is commonly used to represent the letter C. Standardized words like this help ensure clear communication.",
+        "b": "Bravo represents the letter B.",
+        "c": "Golf represents the letter G.",
+        "d": "Echo represents the letter E."
+      },
+      "correctAnswer": "a",
+      "difficulty": "Intermediate"
+    },{
+      "question": "In ham radio, what is the purpose of using the Z code?",
+      "answers": {
+        "a": "To indicate zero power transmission",
+        "b": "To encrypt messages for security",
+        "c": "To represent special call signs",
+        "d": " To communicate in Morse code"
+      },
+      "explanations": {
+        "a": " The Z code is not used to indicate zero power transmission.",
+        "b": "The Z code is not for message encryption.",
+        "c": " The Z code is used in ham radio to represent special call signs, often those assigned to specific purposes or stations. These codes help streamline communication and indicate the type of station involved.",
+        "d": " While Morse code is used in ham radio, the Z code serves a different purpose."
+      },
+      "correctAnswer": "c",
+      "difficulty": "Advanced"
+    },
+    {
+      "question": "What is the purpose of the Prowords in ham radio communication?",
+      "answers": {
+        "a": " To identify pirate radio stations",
+        "b": "To shorten lengthy messages",
+        "c": " To express distress signals",
+        "d": "To report signal quality"
+      },
+      "explanations": {
+        "a": "Prowords are not for identifying pirate radio stations.",
+        "b": " Prowords, or procedure words, are used in ham radio to shorten lengthy messages and streamline communication. They include standardized words and phrases for various procedures.",
+        "c": "While ham radio may include distress signals, Prowords primarily serve as communication shortcuts.",
+        "d": "Reporting signal quality typically involves other procedures."
+      },
+      "correctAnswer": "b",
+      "difficulty": "Advanced"
+    },
+    {
+      "question": "In ham radio, what is the term for the practice of using standardized abbreviations to streamline communication?",
+      "answers": {
+        "a": "Acronyms",
+        "b": "Contractions",
+        "c": "Abbreviations",
+        "d": "Q codes"
+      },
+      "explanations": {
+        "a": " Acronyms are typically initial-letter abbreviations for phrases.",
+        "b": " Contractions are shortened forms of words or combinations.",
+        "c": "While abbreviations are used, Q codes specifically refer to this practice.",
+        "d": "In ham radio, the practice of using standardized abbreviations to streamline communication is often referred to as Q codes. These codes cover a wide range of procedures and information."
+      },
+      "correctAnswer": "d",
+      "difficulty": "Advanced"
+    },
+    {
+      "question": "What do the Q codes typically represent in ham radio communication?",
+      "answers": {
+        "a": " Geographical locations",
+        "b": " Distress signals",
+        "c": "Specific procedures or information",
+        "d": " Phonetic alphabet"
+      },
+      "explanations": {
+        "a": " Q codes are not used for indicating geographical locations.",
+        "b": " Distress signals are typically expressed using specific signals and prowords.",
+        "c": "The Q codes in ham radio communication typically represent specific procedures or information. They are a standardized way of conveying various aspects of communication.",
+        "d": "The Phonetic alphabet is a different system used for letter representation"
+      },
+      "correctAnswer": "c",
+      "difficulty": "Advanced"
+    },
+    {
+      "question": "Which of the following is an example of a proword used in ham radio?",
+      "answers": {
+        "a": "Roger",
+        "b": "Emergency",
+        "c": "November",
+        "d": "Silence"
+      },
+      "explanations": {
+        "a": "Roger is an example of a proword used in ham radio, indicating acknowledgment or understanding. It is a standardized part of communication.",
+        "b": "Emergency is not a proword but a term indicating a critical situation.",
+        "c": "November is a letter representation, not a proword.",
+        "d": "Silence is a command, not a proword."
+      },
+      "correctAnswer": "a",
+      "difficulty": "Advanced"
+    }
+  ]
+}

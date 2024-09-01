@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <title>EXPLORING HAM RADIO: UNDERSTANDING PHONETICS</title>
+  <body>
+    <style>
+      * {
+        margin: 0;
+
+        padding: 0;
+      }
+      h1 {
+        background-color: black;
+        color: white;
+        height: 4vh;
+        font-size: 130%;
+        text-align: center;
+        padding-top: 10px;
+      }
+      .footer {
+        position: absolute;
+        left: 200px;
+        top: 580px;
+        font-size: 12px;
+        text-align: center;
+        padding-left: 90px;
+      }
+
+      h2 {
+        margin-left: 20px;
+      }
+      p {
+        font-size: 90%;
+      }
+      body {
+        font-family: Verdana;
+        margin: 0;
+        padding: 0;
+      }
+      #screen {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        height: 600px;
+        width: 800px;
+        border: solid 1px;
+      }
+      .select {
+        padding-left: 163px;
+        padding-top: 58px;
+      }
+      .btn {
+        text-align: center;
+        padding-top: 44px;
+      }
+      .allignment {
+        position: absolute;
+        left: 15px;
+        top: 45px;
+        margin-left: 15px;
+        margin-right: 8px;
+      }
+      .incanvas {
+        margin: 5px 0 0 5px;
+        padding: 0;
+      }
+
+      .circlebg {
+        border-radius: 100%;
+        font-size: 25px;
+        color: #fff;
+        text-align: center;
+        background: #000;
+      }
+
+      .steptext {
+        display: inline;
+        font-size: 15px;
+      }
+      .btn {
+        position: absolute;
+        left: 348px;
+        top: 408px;
+      }
+    </style>
+    <div id="screen">
+      <h1>EXPLORING HAM RADIO: UNDERSTANDING PHONETICS</h1>
+      <br /><br />
+      <div class="allignment">
+        <strong class="incanvas">STEP</strong>
+        <span class="circlebg">&nbsp;1&nbsp;</span>
+        <p class="steptext">
+          &nbsp;Enter the figure code (0-9 or 0.1 or .) in the input box
+          provided. Click on submit button to start the transmission process.
+        </p>
+      </div>
+      <br />
+      <div class="select">
+        <label for="numberInput">Select the Number:</label>
+        <select style="width: 100px" id="numberInput">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="0.0">0.0</option>
+          <option value=".">.</option>
+        </select>
+      </div>
+      <br />
+      <br />
+      <div class="btn">
+        <button onclick="submitForm()">Submit</button>
+      </div>
+      <br />
+      <div class="footer">
+        &copy; EMBRACE - NITK
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </div>
+    </div>
+
+    <script>
+      function submitForm() {
+        var inputNumber = document.getElementById("numberInput").value;
+        window.location.href =
+          "page5.html?type=number&value=" + encodeURIComponent(inputNumber);
+      }
+    </script>
+  </body>
+</html>
