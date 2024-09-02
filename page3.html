@@ -1,122 +1,130 @@
 <!DOCTYPE html>
 <html>
-<title>EMBRACE</title>
-<body>
-<style>
-    *{
+  <title>EMBRACE</title>
+  <body>
+    <style>
+      * {
         margin: 0;
-    padding: 0;
-    } 
-h1{
-	background-color:black;
-    color:white;
-    height: 4vh;
-    font-size: 130%;
-    text-align: center;
-    padding-top: 10px;
-   }
-   .footer{
-	position: absolute;
-	left:200px;
-	top: 580px;
-	font-size: 12px;
-    text-align: center;
-    padding-left: 90px;
-}
- 
-h2{
-   margin-left: 20px;;
-}
+        padding: 0;
+      }
+      h1 {
+        background-color: black;
+        color: white;
+        height: 4vh;
+        font-size: 130%;
+        text-align: center;
+        padding-top: 10px;
+      }
+      .footer {
+        position: absolute;
+        left: 10px;
+        top: 580px;
+        font-size: 12px;
+        text-align: center;
+        padding-left: 90px;
+      }
 
-body {
-      font-family: Verdana;
-      margin: 0;
-      padding: 0;
-    }
-#screen
-{
-	position: relative;
-	left:0px;
-	top:0px;
-	height: 600px; 
-	width:800px;
-	border:solid 1px;
-}
-.select{
-    padding-left: 163px;
-    padding-top: 58px;
-}
-.btn{
-  text-align: center;
-    padding-top: 44px;
-}
-.allignment{
-            position: absolute;
-            top: 45px;
-            left: 15px;
-            margin-left: 15px;
+      h2 {
+        margin-left: 20px;
+      }
+
+      body {
+        font-family: Verdana;
+        margin: 0;
+        padding: 0;
+      }
+      #screen {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        height: 600px;
+        width: 800px;
+        border: solid 1px;
+      }
+      .select {
+        padding-left: 163px;
+        padding-top: 58px;
+      }
+      .btn {
+        text-align: center;
+        padding-top: 44px;
+      }
+      .allignment {
+        position: absolute;
+        top: 45px;
+        left: 15px;
+        margin-left: 15px;
+      }
+      .incanvas {
+        margin: 5px 0 0 5px;
+        padding: 0;
+      }
+
+      .circlebg {
+        border-radius: 100%;
+        font-size: 25px;
+        color: #fff;
+        text-align: center;
+        background: #000;
+      }
+
+      .steptext {
+        display: inline;
+        font-size: 15px;
+      }
+      .cp {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    </style>
+    <div id="screen">
+      <h1>EXPLORING HAM RADIO: UNDERSTANDING PHONETICS</h1>
+      <br /><br />
+      <div class="allignment">
+        <strong class="incanvas">STEP</strong>
+        <span class="circlebg">&nbsp;1&nbsp;</span>
+        <p style="font: size 110%" class="steptext">
+          &nbsp;Enter the alphabets (A-Z or a-z) in the input box provided.
+          Click on submit button to start the transmission process.
+        </p>
+      </div>
+      <br />
+      <div class="select">
+        <label for="alphabetInput">Select the Alphabet:</label>
+        <input type="text" id="alphabetInput" placeholder="A-Z or a-z" />
+      </div>
+      <br />
+      <br />
+      <div class="btn">
+        <button onclick="submitForm()">Submit</button>
+      </div>
+      <br />
+      <a href="page.html" target="_top"> </a>
+
+      <div class="footer">
+        <span class="cp">&copy;</span>
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        EMBRACE - A Collaborative CSR Project by Robosoft Technologies Pvt Ltd
+        and NITK Surathkal
+      </div>
+    </div>
+    <script>
+      function submitForm() {
+        var inputAlphabet = document
+          .getElementById("alphabetInput")
+          .value.toUpperCase();
+
+        // Check if the input contains only alphabets
+        if (!/^[A-Za-z]+$/.test(inputAlphabet)) {
+          alert("Please enter only alphabets (A-Z or a-z).");
+          return;
         }
-        .incanvas {
-            margin: 5px 0 0 5px;
-            padding: 0;
-        }
 
-        .circlebg {
-            border-radius: 100%;
-            font-size: 25px;
-            color: #fff;
-            text-align: center;
-            background: #000
-        }
-
-        .steptext {
-            display: inline;
-            font-size: 15px;
-        }
-	.cp{
-		font-size: 16px;
-		font-weight: bold;
-	}
-</style>
-<div id="screen">
-<h1>EXPLORING HAM RADIO: UNDERSTANDING PHONETICS
-</h1>
-<br><br>
-<div class="allignment">
-    <strong class="incanvas">STEP</strong>
-    <span class="circlebg">&nbsp;1&nbsp;</span>
-    <p style="font: size 110%;"class="steptext">&nbsp;Enter the alphabets (A-Z or a-z) in the input box provided. Click on submit button to start the transmission process.</p>
-  </div>
-<br>
-<div class="select">
-    <label for="alphabetInput">Select the Alphabet:</label>
-    <input type="text" id="alphabetInput" placeholder="A-Z or a-z">
-</div>
-<br>
-<br>
-<div class="btn">
-<button  onclick="submitForm()">Submit</button>
-</div>
-<br>
-<a href="page.html" target="_top"> 
-</a>
-
-<div class="footer"><span class="cp">&copy;</span> <script>document.write(new Date().getFullYear())</script>EMBRACE - A Collaborative CSR Project by Robosoft Technologies Pvt Ltd and NITK Surathkal
-        </div>
-</div>
-<script>
-    function submitForm() {
-            var inputAlphabet = document.getElementById('alphabetInput').value.toUpperCase();
-
-            // Check if the input contains only alphabets
-            if (!/^[A-Za-z]+$/.test(inputAlphabet)) {
-                alert('Please enter only alphabets (A-Z or a-z).');
-                return;
-            }
-
-            window.location.href = 'page5.html?type=alphabet&value=' + encodeURIComponent(inputAlphabet);
-        }
+        window.location.href =
+          "page5.html?type=alphabet&value=" + encodeURIComponent(inputAlphabet);
+      }
     </script>
-</body>
-</body>
+  </body>
 </html>
